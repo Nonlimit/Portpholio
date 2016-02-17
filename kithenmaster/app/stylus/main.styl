@@ -1,0 +1,329 @@
+@lost flexbox flex
+// @font-face
+//   font-family 'Ostrich Sans Bold'
+//   src url('../fonts/ostrichsansbold.woff2') format('woff2')
+//
+// @font-face
+// 	font-family 'Ostrich Sans Medium'
+// 	src url('../fonts/ostrichsansmedium.woff2') format('woff2')
+//
+// @font-face
+//   font-family 'Ostrich Sans Black'
+//   src url('../fonts/ostrichsansblack.woff2') format('woff2')
+//
+// @font-face
+//   font-family 'ProximaNova Bold'
+//   src url('../fonts/proximanovabold.woff2') format('woff2')
+//
+// @font-face
+//   font-family 'ProximaNova Regular'
+//   src url('../fonts/proximanovaregular.woff2') format('woff2')
+//
+// @font-face
+//   font-family 'Lavanderia Sturdysturdy'
+//   src url('../fonts/lavanderiasturdy.woff2') format('woff2')
+//
+// @font-face
+//   font-family 'Neoubold'
+//   src url('../fonts/neoubold.woff2') format('woff2')
+//
+// @font-face
+//   font-family 'Novecento Sans Wide Bold'
+//   src url('../fonts/novecentosanswidebold.woff2') format('woff2')
+
+body
+	margin 0
+	background-color #2a323a
+
+.header
+	&-container
+		lost-center 940px 80px
+		margin-top 60px
+	&-nav
+		display flex
+		align-items center
+		width 100%
+		justify-content space-between
+	&-items
+		padding 22px
+		display block
+		font-family 'ProximaNova Bold', sans-serif
+		font-size 14px
+		line-height 2.857
+		color rgba( 255, 255, 255, 0.6 )
+		text-transform uppercase
+		text-decoration none
+		&:nth-child(3)
+			padding 0
+			font-family 'Novecento Sans Wide Bold', sans-serif
+			color #f39c12
+			font-size 35px
+
+.logo
+	lost-center 100%
+	height 750px
+	img
+		margin auto
+
+.descriptions
+	background-color #fff
+	position relative
+	z-index 5
+	&:before
+		position absolute
+		content ''
+		top -100%
+		left 0
+		width 100%
+		height 100%
+		position absolute
+		-webkit-clip-path polygon(0 100%, 100% 100%, 100% 80%, 0 100%)
+		background inherit
+	&:after
+		position absolute
+		content ''
+		-webkit-clip-path polygon(0 0, 100% 20%, 100% 0, 0 0)
+		background inherit
+		bottom -100%
+		left 0
+		width 100%
+		height 100%
+	&-container
+		lost-center 940px 80px
+	&-first-block
+		margin-top 20px
+		display flex
+		justify-content space-between
+	&-second-block
+		display flex
+		justify-content space-between
+		margin-top 117px
+	&-text
+		lost-column 1/2 0 0
+		h1
+			font-size 24px
+			font-family "Ostrich Sans Black"
+			color #222
+			line-height 1.25
+		p
+			font-size 16px
+			font-family "ProximaNova Regular"
+			color #222
+			line-height 1.313
+	&-img
+		width 300px
+		height 210px
+		background-color #2a323a
+
+.registr
+	width 100%
+	height 660px
+	position relative
+	&:after
+		position absolute
+		content ''
+		-webkit-clip-path polygon(0 0, 100% 20%, 100% 0, 0 0)
+		background #2a323a
+		bottom -100%
+		left 0
+		width 100%
+		height 100%
+		z-index 10
+	&-container
+		position relative
+		lost-center 940px 80px
+		justify-content center
+		&:before
+			position absolute
+			content ''
+			width 600px
+			background #222
+			height 600px
+			top -40%
+			left 50%
+			transform translateX(-50%)
+			border-radius 50%
+	&-text
+		padding-top 460px
+		font-size 30px
+		font-family "Ostrich Sans Black", sans-serif
+		color rgba( 255, 255, 255, 0.8 )
+		line-height 1.2
+		text-align center
+	&-btn
+		cursor pointer
+		align-self center
+		border-radius 30px
+		margin-top 30px
+		padding-left 50px
+		padding-right 50px
+		padding-top 12px
+		padding-bottom 12px
+		border 2px solid #2ecc71
+		background-color inherit
+		font-size 24px
+		font-family "ProximaNova Bold", sans-serif
+		color rgb( 46, 204, 113 )
+		&:focus
+			outline none
+
+.testimonials
+	position relative
+	background-color #fff
+	height 710px
+	&:after
+		position absolute
+		content ''
+		-webkit-clip-path polygon(0 0, 100% 0, 100% 0, 0 20%);
+		background inherit
+		bottom -100%
+		left 0
+		width 100%
+		height 100%
+	header
+		padding-top 160px
+		font-size 30px
+		font-family "Ostrich Sans Black", sans-serif
+		color #000
+		text-align center
+	&-container
+		lost-center 940px
+		margin-top 70px
+		justify-content space-between
+		.coments
+			lost-row 1/3 30px
+			&:first-child
+				lost-column 2/5 0 0
+			&:nth-child(2n)
+				lost-column 2/5 0 0
+				margin-top 70px
+			&:nth-child(3n)
+				lost-column 2/5 0 0
+			&-text
+				padding-right 10px
+				padding-bottom 10px
+				font-size 16px
+				font-family "ProximaNova Regular"
+				color rgb( 42, 50, 58 )
+				line-height 1.313
+				border-bottom 3px solid #a1a1a1
+				border-right 3px solid #a1a1a1
+			.autor
+				padding-top 15px
+				display flex
+				justify-content flex-end
+				align-items center
+				&-avatar
+					width 45px
+					height 45px
+					border-radius 50%
+					background-color #000
+				.autorwrapper
+					padding-left 10px
+					&-name
+						font-size 16px
+						font-family "ProximaNova Bold"
+						color rgb( 42, 50, 58 )
+						line-height 1.313
+					&-sectext
+						font-size 14px
+						font-family "ProximaNova Regular"
+						color rgb( 137, 137, 137 )
+						line-height 1.5
+
+.footer
+	padding-top 60px
+	background-image url(../images/map.png)
+	height 650px
+	background-repeat no-repeat
+	background-color rgba(#2a323a, .9)
+	.container-f
+		lost-center 940px
+		.footer-copyright
+			font-family 'ProximaNova Regular'
+			color white
+	&-container
+		// border 1px solid red
+		lost-center 940px
+		justify-content space-between
+		margin-top 25%
+	&-text
+		font-family 'Ostrich Sans Medium'
+		text-transform uppercase
+		font-size 30px
+		color white
+		margin-top 30px
+	&-email
+		// margin-left 180px
+		display flex
+		flex-direction column
+		max-width 380px
+		// flex-basis 380px
+		form
+			// width 380px
+			position relative
+			button
+				position absolute
+				top 6px
+				left 93%
+				border none
+				background transparent
+				color #9ca1a2
+			input
+				width 100%
+				padding-bottom 17px
+				font-family 'ProximaNova Regular'
+				text-transform uppercase
+				color #9ca1a2
+				border-bottom 1px solid #a1a1a1
+				border-left none
+				border-right none
+				border-top none
+				background transparent
+				&:focus
+					outline none
+	&-list
+		display flex
+		flex-direction column
+		a
+			font-family 'PoximaNova Regular'
+			text-decoration none
+			color white
+			padding-top 4px
+	&-contacts
+		display flex
+		flex-direction column
+		font-family 'ProximaNova Regular'
+		font-size 16px
+		color white
+		min-width 175px
+	&-adress
+		margin-top 31px
+	&-tel
+		display flex
+		flex-direction column
+		margin-top 26px
+		span
+			text-transform uppercase
+			a
+				color #2ecc71
+				text-decoration none
+				text-transform none
+	&-socilas
+		:nth-child(2)
+			margin-left 7px
+		display flex
+		justify-content flex-start
+		margin-top 27px
+		i
+			font-size 18px
+		span
+			text-transform uppercase
+			a
+				text-transform none
+				color #2ecc71
+				text-decoration none
+	&-logo
+		font-family 'Ostrich Sans Bold'
+		font-size 24px
+		color #f39c12
