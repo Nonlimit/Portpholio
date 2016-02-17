@@ -1,0 +1,847 @@
+border-box-html()
+@lost flexbox flex
+@font-face
+  font-family MyriadProRegular
+  src url(../fonts/MyriadProRegular.woff2) format(woff2)
+
+@font-face
+  font-family RalewayBold
+  src url(../fonts/RalewayBold.woff2) format(woff2)
+
+@font-face
+  font-family RalewayMedium
+  src url(../fonts/RalewayMedium.woff2) format(woff2)
+
+@font-face
+  font-family RalewaySemiBold
+  src url(../fonts/RalewaySemiBold.woff2) format(woff2)
+
+@font-face
+  font-family SourceSansProBold
+  src url(../fonts/SourceSansProBold.woff2) format(woff2)
+
+@font-face
+  font-family SourceSansProIt
+  src url(../fonts/SourceSansProIt.woff2) format(woff2)
+
+@font-face
+  font-family SourceSansProRegular
+  src url(../fonts/SourceSansProRegular.woff2) format(woff2)
+
+@font-face
+  font-family WalckwayBlack
+  src url(../fonts/WalckwayBlack.woff2) format(woff2)
+
+:root
+  --bg-color red
+
+@media (width >= 500px) and (width <= 1200px)
+  header
+    color var(--bg-color)
+@custom-media --only-medium-screen (width >= 500px) and (width <= 1200px)
+
+@media (--only-medium-screen)
+  header
+    color var(--bg-color)
+
+body
+  font-family RalewayBold, RalewayMedium, RalewaySemiBold, SourceSansProBold, SourceSansProIt, SourceSansProRegular, WalckwayBlack, MyriadProRegular, sans-serif
+  background-color #fff
+
+.header
+  color var(--bg-color)
+  &--img
+    background-image url(../images/header.png)
+    background-repeat round
+    min-height 100vh
+  &-nav
+    align-items center
+    lost-center 1170px 15px
+    max-height 75px
+    padding-top 51px
+    &-first
+      justify-content space-between
+    &--logo
+      cursor pointer
+      display block
+      background url(../images/logo-first.png) no-repeat
+      width 104px
+      height 26px
+    &--socials
+      a
+        text-decoration none
+        color #000
+        &:visited
+          color inherit
+        i
+          display inline-flex
+          align-items center
+          justify-content center
+          border-radius 50%
+          width 25px
+          height 25px
+          background-color #fff
+          &:not(:first-child)
+            margin-left 6px
+    &-second
+      justify-content space-between
+      &-list
+        lost-column 1/5 0 0
+        &--items
+          list-style-type none
+  &-content
+    margin-top 165px
+    text-align center
+    color #fff
+    h1
+      font-size 45px
+      b
+        color #008ed6
+        font-weight 400
+    p
+      margin 0 auto
+      max-width 850px
+      padding-top 45px
+      font-size 20px
+  &-form-wrapper
+    background-color rgba(0, 0, 0, .5)
+    border-radius 2px
+    margin-top 160px
+    lost-center 945px 23px
+    padding-top 25px
+    padding-bottom 25px
+    form
+      display flex
+      justify-content space-between
+      width 100%
+      input
+        display flex
+        padding-left 20px
+        padding-right 0
+        padding-top 0
+        padding-bottom 0
+        color #727272
+        font-family Raleway, sans-serif
+        font-size 16px
+        min-height 50px
+        min-width 217px
+        border-radius 2px
+        border 1px solid #008ed6
+        border-left 4px solid #008ed6
+        background-color #000
+        box-sizing border-box
+        transition all .7s linear
+        &:not(:first-child)
+          margin-left 23px
+      .btn
+        button-disabled()
+        display flex
+        justify-content center
+        padding 0
+        margin-left 23px
+        border-radius 2px
+        text-transform uppercase
+        border none
+        cursor pointer
+        font-family Raleway, sans-serif
+        font-size 16px
+        background-color #008ed6
+        color #fff
+        min-height 54px
+        min-width 184px
+
+.first-section
+  padding-bottom 100px
+  background-color #fff
+  .wrapper-browsers
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    margin-top 100px
+    .browser
+      visibility hidden
+      flex 0 0 auto
+      width calc(99.99%*1/2 - (30px - 30px*1/2))
+      background-repeat no-repeat
+      height 424px
+      width 532px
+      &:nth-child(n)
+        margin-right 30px
+      &:last-child
+        margin-right 0
+      &:nth-child(0n)
+        margin-right 0
+    .text
+      flex 0 0 auto
+      width calc(99.99%*1/2 - (30px - 30px*1/2))
+      &:nth-child(n)
+        margin-right 30px
+      &:last-child
+        margin-right 0
+      &:nth-child(0n)
+        margin-right 0
+      h1
+        display inline
+        font-family Raleway, sans-serif
+        font-size 35px
+        color #323232
+      p
+        color #727272
+        margin-top 55px
+        font-size 16px
+      .block
+        &:not(last-child)
+          margin-bottom 52px
+        p
+          -webkit-margin-before 0
+          -webkit-margin-after 0
+          padding-left 52px
+        .icon-text
+          display flex
+          position relative
+          i
+            display inline-flex
+            justify-content center
+            align-items center
+            background-color #008ed6
+            color #fff
+            border-radius 2px
+            width 33px
+            height 33px
+          h2
+            -webkit-margin-before 0
+            -webkit-margin-after 0
+            position absolute
+            top -5px
+            left 51px
+
+.second-section
+  padding-top 100px
+  padding-bottom 100px
+  background-color #f7f8fa
+  .wrapper-browsers
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    .browser
+      flex 0 0 auto
+      width calc(99.99%*1/2 - (30px - 30px*1/2))
+      background-image url(../images/browser.png)
+      background-repeat no-repeat
+      height 424px
+      width 532px
+      visibility hidden
+      &:nth-child(n)
+        margin-right 30px
+      &:last-child
+        margin-right 0
+    .text
+      flex 0 0 auto
+      width calc(99.99%*1/2 - (30px - 30px*1/2))
+      &:nth-child(n)
+        margin-right 30px
+      &:last-child
+        margin-right 0
+      h1
+        display inline
+        font-family Raleway, sans-serif
+        font-size 35px
+        color #323232
+      p
+        color #727272
+        margin-top 55px
+        font-size 16px
+      .block
+        &:not(last-child)
+          margin-bottom 52px
+        p
+          -webkit-margin-before 0
+          -webkit-margin-after 0
+          padding-left 52px
+        .icon-text
+          display flex
+          position relative
+          i
+            display inline-flex
+            justify-content center
+            align-items center
+            background-color #008ed6
+            color #fff
+            border-radius 2px
+            width 33px
+            height 33px
+          h2
+            -webkit-margin-before 0
+            -webkit-margin-after 0
+            position absolute
+            top -5px
+            left 51px
+
+.third-section
+  padding-top 76px
+  background-color #fff
+  .wrapper-features
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    header
+      text-align center
+      padding-bottom 75px
+      width 100%
+      h1
+        font-family Raleway, sans-serif
+        font-size 35px
+        font-weight 700
+        color #000
+        -webkit-margin-start 0
+        -webkit-margin-end 0
+      p
+        display inline
+        padding-top 43px
+        padding-bottom 43px
+        font-size 17px
+        color #727272
+        font-family Raleway, sans-serif
+    .content
+      display flex
+      flex-flow row wrap
+      .blocks
+        visibility hidden
+        box-shadow 0 0 3px 3px #e5e5e5
+        padding-bottom 50px
+        margin-bottom 30px
+        text-align center
+        flex 0 0 auto
+        width calc(99.99%*3/6 - (30px - 30px*3/6))
+        flex 1 1 360px
+        &:nth-child(n)
+          margin-right 30px
+        &:last-child
+          margin-right 0
+        &:nth-child(3n)
+          margin-right 0
+        &:hover
+          box-shadow 0 0 5px 5px #e5e5e5
+        h1
+          font-family Raleway, sans-serif
+          font-size 20px
+          color #323232
+          padding-bottom 17px
+          -webkit-margin-before 0
+          -webkit-margin-after 0
+        p
+          padding-left 10px
+          padding-right 10px
+          font-family Raleway, sans-serif
+          color #727272
+          font-size 16px
+          -webkit-margin-before 0
+          -webkit-margin-after 0
+        i
+          color #008ed6
+          font-size 50px
+          padding-bottom 28px
+          padding-top 20px
+
+.four-section
+  background-color #f7f8fa
+  padding-top 113px
+  padding-bottom 100px
+  header
+    text-align center
+    h1
+      display inline
+      color #323232
+      font-size 35px
+      font-family Raleway, sans-serif
+    p
+      font-family inherit
+      font-size 17px
+      color #727272
+      padding-top 36px
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+  .wrapper-pricing
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    .block-price
+      visibility hidden
+      border-radius 3px
+      box-shadow 0 0 3px 3px #e5e5e5
+      border #e5e5e5 1px solid
+      margin-top 81px
+      flex 0 0 auto
+      width calc(99.99%*3/3 - (30px - 30px*3/3))
+      max-width 368px
+      min-width 280px
+      &:nth-child(n)
+        margin-right 30px
+      &:last-child
+        margin-right 0
+      .head
+        padding-top 24px
+        padding-bottom 24px
+        text-align center
+        background-color #323232
+        h3
+          font-family inherit
+          font-size 24px
+          color #fff
+          display inline
+        p
+          color #fff
+          font-family inherit
+          font-size 16px
+          padding-top 17px
+          -webkit-margin-before 0
+          -webkit-margin-after 0
+      .head--active
+        background-color #008ed6
+      .list-block
+        display flex
+        flex-direction column
+        .item
+          padding-left 30px
+          padding-right 30px
+          display flex
+          justify-content space-between
+          &:not(:last-child)
+            border-bottom dotted 2px #e3e3e3
+          i
+            display inline-flex
+            align-items center
+        .sign
+          padding-left 30px
+          padding-right 30px
+          display flex
+          justify-content space-between
+          p
+            display flex
+            align-items center
+          .btn
+            padding 15px
+            margin-top 16px
+            margin-bottom 16px
+            display inline-flex
+            cursor pointer
+            background-color inherit
+            border 1px solid #727272
+            border-radius 2px
+            text-transform uppercase
+            color #727272
+            font-size 16px
+            font-family inherit
+          .btn--active
+            border none
+            background-color #008ed6
+            color #fff
+
+.section-video
+  background-color #fff
+  padding-top 110px
+  header
+    text-align center
+    h1
+      display inline
+      font-family inherit
+      font-size 35px
+      color #323232
+    p
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+      padding-top 32px
+      font-family inherit
+      font-size 17px
+      color #727272
+  .video-wrapper
+    display flex
+    flex-flow row wrap
+    max-width 975px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    video
+      padding-top 77px
+      width 100%
+    .block_icons
+      padding-top 45px
+      display flex
+      flex-flow row wrap
+      width 100%
+      justify-content space-around
+      .left-b
+        display flex
+        i
+          display inline-flex!important
+          align-items center
+          font-size 24px
+          display inline
+          color #008ed6
+        p
+          padding-left 11px
+          display inline
+          color #323232
+          font-size 18px
+      .center-b
+        display flex
+        i
+          display inline-flex!important
+          align-items center
+          font-size 24px
+          display inline
+          color #008ed6
+        p
+          padding-left 11px
+          display inline
+          color #323232
+          font-size 18px
+      .right-b
+        display flex
+        i
+          display inline-flex!important
+          align-items center
+          font-size 24px
+          display inline
+          color #008ed6
+        p
+          padding-left 11px
+          display inline
+          color #323232
+          font-size 18px
+
+.section-screenshots
+  padding-top 110px
+  background-color #f7f8fa
+  header
+    text-align center
+    h1
+      display inline
+      font-family inherit
+      font-size 35px
+      color #323232
+    p
+      padding-top 32px
+      font-family inherit
+      font-size 17px
+      color #727272
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+  .wrapper-screenshots
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    padding-top 78px
+    padding-bottom 156px
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+  background #008ed6
+
+.owl-theme
+  .owl-dots
+    .owl-dot
+      span
+        background #94cae6
+
+.section-cleints
+  padding-top 110px
+  background-color #fff
+  header
+    text-align center
+    h1
+      display inline
+      font-family inherit
+      font-size 35px
+      color #323232
+    p
+      padding-top 30px
+      font-size 17px
+      font-family inherit
+      color #727272
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+  .company
+    padding-top 80px
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    justify-content center
+    img
+      &:not(:first-child)
+        padding-left 45px
+  .wrapper-clients
+    display flex
+    flex-flow row wrap
+    max-width 1170px
+    margin-left auto
+    margin-right auto
+    padding-left 15px
+    padding-right 15px
+    padding-top 80px
+    .coments-block
+      flex-direction column
+      text-align center
+      display flex
+      flex 0 0 auto
+      width calc(99.99%*1/3 - (30px - 30px*1/3))
+      &:nth-child(n)
+        margin-right 30px
+      &:last-child
+        margin-right 0
+      .coments
+        position relative
+        background-color #f7f8fa
+        box-shadow -3px 3px 5px 0 #e5e5e5
+        &:before
+          position relative
+          content ''
+        &:after
+          width 30px
+          height 30px
+          background-color inherit
+          position absolute
+          content ''
+          bottom -15px
+          box-shadow -3px 3px 5px 0 #e5e5e5
+          transform rotate(-45deg)
+          left calc(50% - 15px)
+        .icon
+          background-color #008ed6
+          position absolute
+          top -16px
+          left calc(50% - 16px)
+          width 32px
+          height 32px
+          outline 4px solid #e5e5e5
+          border 3px solid #fff
+          border-radius 5px
+          i
+            font-size 31px
+            color #fff
+        .text-coments
+          padding-top 53px
+          padding-left 35px
+          padding-right 35px
+          padding-bottom 33px
+      h3
+        padding-top 35px
+        display inline
+        -webkit-margin-before 0
+        -webkit-margin-after 0
+        font-family inherit
+        font-size 16px
+        color #008ed6
+      p
+        padding-top 6px
+        font-family inherit
+        font-size 16px
+        color #727272
+        -webkit-margin-before 0
+        -webkit-margin-after 0
+
+.section-registr
+  margin-top 100px
+  .btn-registr
+    display block
+    margin-right auto
+    margin-top 54px
+    margin-left auto
+    padding-top 21px
+    padding-bottom 21px
+    padding-left 32px
+    padding-right 22px
+    border none
+    border-radius 3px
+    cursor pointer
+    background-color #008ed6
+    color #fff
+    font-family inherit
+    font-size 16px
+    text-transform uppercase
+    i
+      padding-left 11px
+      font-size 16px
+  header
+    text-align center
+    h3
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+      padding-top 140px
+      font-family inherit
+      font-size 20px
+      color #fff
+    h4
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+      padding-top 27px
+      font-family inherit
+      font-size 35px
+      color #fff
+
+footer
+  display flex
+  flex-direction column
+  .help
+    width 100%
+    flex 0 0 auto
+    height calc(99.999999%*1/2)
+    margin-bottom 0
+    background-color #fff
+    text-align center
+    &:last-child
+      margin-bottom 0
+    h1
+      padding-top 58px
+      font-family inherit
+      font-size 24px
+      color #000
+    a
+      display block
+      color #008ed6
+      padding-bottom 82px
+      font-size 17px
+      font-family inherit
+      text-decoration none
+      &:visited
+        color #008ed6
+      i
+        padding-right 8px
+  .copyright
+    background-color #f7f8fa
+    text-align center
+    width 100%
+    flex 0 0 auto
+    height calc(99.999999%*1/2)
+    margin-bottom 0
+    &:last-child
+      margin-bottom 0
+    .logo
+      cursor pointer
+      margin-top 76px
+      margin-right auto
+      margin-left auto
+    p
+      -webkit-margin-before 0
+      -webkit-margin-after 0
+      padding-top 20px
+      color #727272
+      font-family inherit
+      font-size 16px
+    .socials-spright
+      display flex
+      justify-content center
+      padding-top 22px
+      padding-bottom 100px
+      .box
+        cursor pointer
+        border-radius 3px
+        background-color #919191
+        width 25px
+        height 25px
+        &:not(:first-child)
+          margin-left 5px
+        i
+          padding-top 3px
+          color #fff
+          font-size 20px
+
+@media only screen and (max-width:980px)
+  form
+    flex-direction column
+    width 100%
+    & > *
+      flex-direction column
+    & > *:not(:first-child)
+      margin-top 30px
+      margin-left 0!important
+    .btn
+      margin-left 0
+      align-items center
+  .browser
+    flex 0 0 auto
+    width calc(99.99%*1/1 - (0 - 0*1/1))
+    &:nth-child(n)
+      margin-right 0
+    &:last-child
+      margin-right 0
+    &:nth-child(0n)
+      margin-right 0
+  .text
+    padding-top 30px
+    flex 0 0 auto!important
+    width calc(99.99%*1/1 - (0 - 0*1/1))!important
+    &:nth-child(n)
+      margin-right 0!important
+    &:last-child
+      margin-right 0!important
+    &:nth-child(0n)
+      margin-right 0!important
+
+@media only screen and (max-width:1187px)
+  .blocks
+    flex 0 0 auto!important
+    width calc(99.99%*2/6 - (25px - 25px*2/6))!important
+    flex 1 1 360px!important
+    &:nth-child(n)
+      margin-right 25px!important
+    &:last-child
+      margin-right 0!important
+    &:nth-child(2n)
+      margin-right 0!important
+
+@media only screen and (max-width:792px)
+  .blocks
+    flex 0 0 auto!important
+    width calc(99.99%*1/6 - (20px - 20px*1/6))!important
+    flex 1 1 360px!important
+    &:nth-child(n)
+      margin-right 20px!important
+    &:last-child
+      margin-right 0!important
+    &:nth-child(1n)
+      margin-right 0!important
+  .block-price
+    flex 0 0 auto!important
+    width calc(99.99%*3/3 - (30px - 30px*3/3))!important
+    min-width 100%!important
+    &:nth-child(n)
+      margin-right 30px!important
+    &:last-child
+      margin-right 0!important
+    &:nth-child(1n)
+      margin-right 0!important
+  .coments-block
+    flex 0 0 auto!important
+    width calc(99.99%*3/3 - (30px - 30px*3/3))!important
+    padding-top 45px
+    &:nth-child(n)
+      margin-right 30px!important
+    &:last-child
+      margin-right 0!important
+    &:nth-child(1n)
+      margin-right 0!important
