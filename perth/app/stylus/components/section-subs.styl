@@ -1,0 +1,46 @@
+.subscribe
+  background-color #f4f4f4
+  height 500px
+  .container
+    lost-center 940px 15px
+    flex-flow column wrap
+    .socials
+      display flex
+      justify-content center
+      margin-top 240px
+      &--elem
+        display flex
+        align-items center
+        justify-content center
+        width 50px
+        height 50px
+        border-radius 50%
+        border 3px solid #545454
+        cursor pointer
+        &:not(:first-child)
+          margin-left 35px
+        i
+          color #545454
+          font-size 25px
+    form
+      display flex
+      justify-content center
+      align-items center
+      margin-top 65px
+      label
+        font-weight bold
+        font-style italic
+        font-family ProximaNova Regular
+      input
+        background-color #fff
+        border none
+        border-radius 9px
+        padding-left 20px
+        padding-top 16px
+        padding-bottom 16px
+        padding-right 120px
+        margin-left 25px
+        &:focus,active
+          outline none
+        &::placeholder
+          color #d3d3d3

@@ -1,0 +1,170 @@
+@lost flexbox flex
+//Header Iphone 5
+.iphone-hold
+  width 230px
+  .iphone-main
+    display block
+    position relative
+    background-color #f3787a
+    border-radius 11.5px
+    border 10.35px solid #1d2d2d
+    border-top 64.791px solid #1d2d2d
+    border-bottom 64.791px solid #1d2d2d
+    border-radius 23px
+    height 473.8px
+    &:after
+      content ''
+      position absolute
+      top -41.4px
+      left 50%
+      transform translate(-50%,0)
+      width 8.51px
+      height 8.51px
+      background-color #959595
+      border-radius 100%
+    &:before
+      content ""
+      position absolute
+      left 50%
+      top -20.7px
+      opacity 1
+      width 41.4px
+      height 5.29px
+      transform translate(-50%)
+      border-radius 2.3px
+      background-color #959595
+  .iphone-inner
+    display block
+  .iphone-sub
+    display block
+    text-align center
+    position relative
+    height 0
+    .iphone-bot
+      border-radius 100%
+      width 36.455px
+      height 36.455px
+      display block
+      margin 0 auto
+      background-color transparent
+      box-shadow 0 0 0 2px rgba(195,195,195,0.5)
+      z-index 2
+      transform translate(0,-50.623px)
+
+
+
+.header
+  height 650px
+  position relative
+  content ''
+  background url(../images/header-bg.png) #63c2e7
+  // overflow hidden
+  .header-owerlay
+    display none
+    background-color rgba(#e57f85, .9)
+    position absolute
+    content ''
+    width 100%
+    height 100%
+    top 0
+    left 0
+    z-index 2
+    &_active
+      display block
+    .nav
+      display flex
+      flex-direction column
+      justify-content center
+      margin-left auto
+      margin-right auto
+      max-width 200px
+      height 100%
+      &--link
+        text-decoration none
+        &:not(:first-child)
+          margin-top 50px
+        &:visited
+          color inherit
+        span
+          font-family ProximaNova Bold
+          color #fff
+          padding-left 39px
+          font-size 18px
+        i
+          color #4eacdd
+          position relative
+          content ''
+          &:after
+            content ''
+            position absolute
+            width 50px
+            height 50px
+            background-color #fff
+            border-radius 50%
+            z-index -1
+            left calc(50% - 25px)
+            top calc(50% - 25px)
+  &-container
+    lost-center 960px 15px
+    max-height 650px
+    .header-wrap-top
+      lost-flex-container row
+      justify-content space-between
+      align-items center
+      width 100%
+      &--logo
+        background-image url('../images/logo.png')
+        width 100px
+        height 100px
+        border-bottom 4px solid #0da9e5
+        box-shadow 15px 15px 0px 15px #27b0e6
+      &--icon-nav
+        width 25px
+        height 25px
+        font-size 30px
+        cursor pointer
+        color #fff
+        z-index 2
+        i
+          &:nth-child(2)
+            display none
+
+  &-content
+    lost-flex-container column
+    align-items flex-end
+    width 100%
+    margin-top 55px
+    .header-content-text
+      display flex
+      flex-direction column
+      &--first-word
+        align-self flex-end
+        font-family 'BlackJack Regular'
+        font-size 70px
+        color #fff
+      &--sec-word
+        padding-top 55px
+        font-family 'ProximaNova Regular'
+        font-size 35px
+        color #fff
+        em
+          font-weight bold
+    &--btn
+      margin-top 50px
+      font-family ProximaNova Regular
+      font-size 15px
+      display flex
+      justify-content center
+      align-items center
+      color #fff
+      text-transform uppercase
+      text-decoration none
+      border 3px solid #fff
+      width 173px
+      height 57px
+      background-color transparent
+      border-radius 2px
+      i
+        cursor pointer
+        padding-left 12px
+        color #fff

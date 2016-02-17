@@ -1,0 +1,63 @@
+@lost flexbox flex
+.section-ipad
+  background-color #f4f4f4
+  height 750px
+  position relative
+  overflow hidden
+  .container
+    lost-center 960px 15px
+    height 100%
+    position relative
+    .header-section
+      width 50%
+      margin-top 150px
+      display flex
+      flex-flow column wrap
+      h1
+        font-family ProximaNova Regular
+        font-size 40px
+        color #545454
+        margin 0
+      .text
+        margin 0
+        margin-top 35px
+        color #7e7e7e
+        font-style italic
+      .coments
+        position relative
+        padding-left 15px
+        margin-top 30px
+        &:before
+          content ''
+          position absolute
+          top 0
+          bottom 0
+          left -6px
+          height 100%
+          width 6px
+          background-color #4eacdd
+      &_left
+        align-items flex-start
+      &_right
+        align-items flex-end
+      .btn
+        background-color transparent
+        border 3px solid #14af8f
+        text-transform uppercase
+        color #14af8f
+        font-family ProximaNova Regular
+        font-size 15px
+        margin-top 70px
+        padding-top 22px
+        padding-bottom 22px
+        padding-left 27px
+        padding-right 27px
+        cursor pointer
+        border-radius 2px
+        i
+          padding-left 15px
+    .ipad-block
+      position absolute
+      right -20%
+      top 20%
+      max-width 50%
