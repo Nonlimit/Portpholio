@@ -1,0 +1,136 @@
+.footer-menu
+  display flex
+  justify-content center
+  width 100%
+  margin-left 100px
+  &--link
+    display flex
+    flex-flow row-reverse
+    position relative
+    text-decoration none
+    text-transform uppercase
+    color $footer-menu--link_c
+    &:not(:first-child)
+      margin-left 60px
+
+.dots-container
+  display flex
+  align-self center
+  margin-right 10px
+  &_red
+    width 35px
+    height 19px
+    border-radius 7px
+    justify-content center
+    align-items center
+    background-color $footer-menu--link_red
+    &:hover
+    &:active
+    &:focus
+      .dot
+        transition transform .3s ease
+        transform scale(1.5)
+  &_green
+    width 35px
+    height 19px
+    border-radius 7px
+    background-color $footer-menu--link_green
+    justify-content center
+    align-items center
+    &:hover
+    &:active
+    &:focus
+      .dot
+        transition all .3s ease
+        transform translateX(-7px)
+  &_yellow
+    width 35px
+    height 19px
+    border-radius 7px
+    background-color $footer-menu--link_yellow
+    justify-content center
+    align-items center
+    &:hover
+    &:active
+    &:focus
+      .dots-wrapper
+        transition all .3s ease
+        transform rotate(90deg) translateY(-2px)
+        animation-delay 1s
+    .dots-wrapper
+      display flex
+      height 70%
+      width 50%
+      span:first-child
+        align-self flex-end
+      span:nth-child(2)
+        margin 0
+      span:nth-child(3)
+        align-self flex-end
+        margin 0
+  &_violet
+    width 35px
+    height 19px
+    border-radius 7px
+    background-color $footer-menu--link_violet
+    justify-content center
+    align-items center
+    &:hover
+    &:active
+    &:focus
+      .dots-wrapper
+        .dot:first-child
+          transition all .3s ease-in
+          transform translate(4.4px, 4.4px)
+        .dot:nth-child(2)
+          transition all .3s ease-in
+          transform translate(-4.4px, 4.4px)
+        .dot:nth-child(3)
+          transition all .3s ease-in
+          transform translate(4.4px, -4.4px)
+        .dot:nth-child(4)
+          transition all .3s ease-in
+          transform translate(-4.4px, -4.4px)
+
+    .dots-wrapper
+      display flex
+      flex-flow row wrap
+      justify-content space-between
+      height 75%
+      width 40%
+      span:nth-child(n)
+        margin 0
+
+.footer-nav-controll
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  margin-bottom 23px
+  margin-top 47px
+  position fixed
+
+.dot
+  width 6px
+  height 6px
+  border-radius 50%
+  background-color $footer-menu--dots_bgc
+  &:not(:first-child)
+    margin-left 5px
+
+.section-indicator
+  display flex
+  margin-right 60px
+  &--link
+    &:not(:first-child)
+      margin-left 10px
+    &:hover
+    &:active
+    &:focus
+      transform scale(2)
+    width 10px
+    height 10px
+    background-color $section-indicator--link_bgc
+    &_active
+      transition all .3s ease
+      background-color $section-indicator--link_active_bgc

@@ -1,0 +1,133 @@
+body
+  background-color $body_bgc
+  height 1080px
+
+.card_filter
+  filter contrast(1.1)
+
+.card_shadow
+  &:before
+    position absolute
+    content ''
+    top 0
+    left 0
+    right 0
+    bottom 0
+    box-shadow inset 0px -110px 45px -20px rgba($card_shadow_c, .3)
+    z-index 3
+  &:hover
+  &:active
+  &:focus
+    &:before
+      transition .3s ease box-shadow
+      box-shadow inset 0px -110px 45px -20px rgba($card_hover_active, .3)
+
+.card
+  position relative
+  background-color $card_bgc
+  box-sizing border-box
+  // Card sizes
+  &_596x596
+    height $card--size_596
+    width $card--size_596
+
+  &_596x288
+    height $card--size_288
+    width $card--size_596
+
+  &_288x288
+    height $card--size_288
+    width $card--size_288
+
+  &_288x596
+    height $card--size_596
+    width $card--size_288
+  // Card underline
+  &--line
+    &_red
+      &:after
+        {$card--line-block}
+        background-color $card--line_red
+    &_yellow
+      &:after
+        {$card--line-block}
+        background-color $card--line_yellow
+    &_blue
+      &:after
+        {$card--line-block}
+        background-color $card--line_blue
+    &_pink
+      &:after
+        {$card--line-block}
+        background-color $card--line_pink
+  // Card image and text wrapper
+  figure
+    display flex
+    justify-content center
+    align-items center
+    height 100%
+    figcaption
+      position absolute
+      content ''
+      bottom 17px
+      left 17px
+      z-index 4
+
+
+.card--text
+  &_info
+    display block
+    font-family Exo2 Light
+    color $card--text-head_c
+    margin 0
+    margin-top 10px
+    margin-bottom 5px
+    text-decoration none
+  &_title
+    display block
+    font-family Exo2 Extra Bold
+    color $card--text-head_c
+    font-size 30px
+    text-transform uppercase
+    margin 0
+    margin-top 17px
+    text-decoration none
+  &_tag-new
+    display block
+    background-color $card--text-head_bgc
+    display inline
+    padding 6px
+    font-family Exo2 Regular
+    font-size 12px
+    color $card--text-head_c
+    margin 0
+    text-decoration none
+
+.article-container
+  height 904px
+  width 96%
+  margin-left 14px
+  display flex
+  flex-flow column wrap
+
+// Cards top-margin
+.card
+  margin-top 20px
+  &:nth-child(n)
+    margin-left 20px
+
+// Usefull classes for grid
+.offset-x596
+  margin-left -596px !important
+.offset-x228
+  margin-left -288px !important
+.margin-top-0
+  margin-top 0 !important
+
+.wrapper_sections
+  display flex
+  margin-top 87px
+
+section
+  width 96%
+  height 904px
